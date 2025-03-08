@@ -1,72 +1,58 @@
 #include <iostream>
 using namespace std;
-/* 
-NAME : EMMANUEL BARAKA
+/* NAME : EMMANUEL BARAKA
 REG : BSCIT-05-0113/2024
-*/
+*/    
 
 int main() {
-    // 2x2 Matrix
-    int mat2x2[2][2] = {
-        {1, 2},
-        {3, 4}
-    };
+    // 1D Matrix (Array)
+    int matrix1D[5] = {1, 2, 3, 4, 5};
     
-    // 2x3 Matrix
-    int mat2x3[2][3] = {
+    // 2D Matrix (Array)
+    int matrix2D[3][3] = {
         {1, 2, 3},
-        {4, 5, 6}
+        {4, 5, 6},
+        {7, 8, 9}
     };
 
-    // 3x2 Matrix
-    int mat3x2[3][2] = {
-        {1, 2},
-        {3, 4},
-        {5, 6}
-    };
-
-    // 2x4 Matrix
-    int mat2x4[2][4] = {
-        {1, 2, 3, 4},
-        {5, 6, 7, 8}
-    };
-
-    // Printing 2x2 Matrix
-    cout << "2x2 Matrix:" << endl;
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 2; j++) {
-            cout << mat2x2[i][j] << " ";
+    // 3D Matrix (Array)
+    int matrix3D[2][2][2] = {
+        {
+            {1, 2},
+            {3, 4}
+        },
+        {
+            {5, 6},
+            {7, 8}
         }
-        cout << endl;
-    }
+    };
 
-    // Printing 2x3 Matrix
-    cout << "\n2x3 Matrix:" << endl;
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 3; j++) {
-            cout << mat2x3[i][j] << " ";
-        }
-        cout << endl;
+    // Printing 1D Matrix
+    cout << "1D Matrix:" << endl;
+    for (int i = 0; i < 5; i++) {
+        cout << matrix1D[i] << " ";
     }
+    cout << endl << endl;
 
-    // Printing 3x2 Matrix
-    cout << "\n3x2 Matrix:" << endl;
+    // Printing 2D Matrix
+    cout << "2D Matrix:" << endl;
     for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 2; j++) {
-            cout << mat3x2[i][j] << " ";
+        for (int j = 0; j < 3; j++) {
+            cout << matrix2D[i][j] << " ";
         }
         cout << endl;
     }
+    cout << endl;
 
-    // Printing 2x4 Matrix
-    cout << "\n2x4 Matrix:" << endl;
+    // Printing 3D Matrix
+    cout << "3D Matrix:" << endl;
     for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 4; j++) {
-            cout << mat2x4[i][j] << " ";
+        for (int j = 0; j < 2; j++) {
+            for (int k = 0; k < 2; k++) {
+                cout << "matrix3D[" << i << "][" << j << "][" << k << "] = " << matrix3D[i][j][k] << endl;
+            }
         }
-        cout << endl;
     }
 
     return 0;
 }
-
